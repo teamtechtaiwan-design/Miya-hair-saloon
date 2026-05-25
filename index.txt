@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miya 越式洗髮館｜高雄放鬆療癒越式洗髮 SPA</title>
+  <meta name="description" content="Miya 越式洗髮館，位於高雄華夏路。70分鐘越式洗髮、肩頸按摩、臉部清潔、頭皮舒壓，一次完成。5.0 Google 好評，舒服到睡著的療癒體驗。" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       💎 奢華祖母綠與香檳金核心設定 (Cinematic Luxury Vibe)
+       ========================================================================== */
+    :root {
+      --emerald-deep: #032217;     /* 深沉祖母綠 - 暗色基調 */
+      --emerald-mid: #053b29;      /* 奢華經典綠 - 漸層過渡 */
+      --gold-champagne: #E7C9A4;  /* 霧面香檳金 - 點綴與邊框 */
+      --gold-light: #f5efe6;      /* 暖陽奶油白 - 主要文字 */
+      --gold-glow: rgba(231, 201, 164, 0.15); /* 金色療癒微光 */
+      --font-serif: 'Cormorant Garamond', 'Noto Serif TC', serif;
+      --font-sans: 'Noto Sans TC', sans-serif;
+    }
+
+    /* 基礎重設，打造如流水般的柔順感 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--emerald-deep);
+      color: var(--gold-light);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: hidden;
+      /* 模擬光影與水面折射的動態背景 */
+      background: radial-gradient(circle at 80% 20%, var(--emerald-mid) 0%, var(--emerald-deep) 70%);
+      background-attachment: fixed;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* ==========================================================================
+       🧭 頂部導覽列 - 輕奢磨砂玻璃質感
+       ========================================================================== */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 4%;
+      background: rgba(3, 34, 23, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(231, 201, 164, 0.1);
+    }
+
+    .brand {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      letter-spacing: 4px;
+      font-weight: 600;
+      color: var(--gold-champagne);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .nav {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .nav a {
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      font-weight: 300;
+      opacity: 0.8;
+    }
+
+    .nav a:hover {
+      opacity: 1;
+      color: var(--gold-champagne);
+      text-shadow: 0 0 8px var(--gold-glow);
+    }
+
+    /* 高級按鈕語法 */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 2rem;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      border-radius: 0px; /* 直角設計更顯高雅犀利 */
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .btn-gold {
+      background-color: var(--gold-champagne);
+      color: var(--emerald-deep);
+    }
+
+    .btn-gold:hover {
+      background-color: #f3e3ce;
+      box-shadow: 0 4px 20px var(--gold-glow);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(231, 201, 164, 0.4);
+      color: var(--gold-champagne);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold-champagne);
+      background: rgba(231, 201, 164, 0.05);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       🎬 HERO 主視覺區 - 沉浸式劇本開場
+       ========================================================================== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 4% 4rem 4%;
+      position: relative;
+    }
+
+    /* 背景柔和呼吸光暈 - 模擬微光與水霧 */
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(231, 201, 164, 0.08) 0%, transparent 70%);
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      animation: pulseGlow 8s infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      0% { opacity: 0.6; transform: translate(-50%, -50%) scale(0.9); }
+      100% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+    }
+
+    .hero-inner {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--gold-champagne);
+      letter-spacing: 3px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: 4.5rem;
+      font-weight: 400;
+      letter-spacing: 6px;
+      color: var(--gold-champagne);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 300;
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+      color: var(--gold-light);
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      opacity: 0.85;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    /* 右側五星口碑懸浮卡片 */
+    .hero-card {
+      background: rgba(5, 59, 41, 0.4);
+      border: 1px solid rgba(231, 201, 164, 0.2);
+      padding: 3rem 2.5rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba(231, 201, 164, 0.05);
+      pointer-events: none;
+    }
+
+    .rating {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      color: var(--gold-champagne);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stars {
+      color: var(--gold-champagne);
+      letter-spacing: 4px;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .hero-card h3 {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .hero-card small {
+      display: block;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* ==========================================================================
+       🧘 SERVICES 療程選擇 - 高級精品排版
+       ========================================================================== */
+    #services {
+      padding: 7rem 4%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      text-align: center;
+      color: var(--gold-champagne);
+      margin-bottom: 4rem;
+      letter-spacing: 2px;
+      font-weight: 400;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
+
+    article {
+      background: rgba(3, 34, 23, 0.6);
+      border: 1px solid rgba(231, 201, 164, 0.15);
+      padding: 3.5rem 2.5rem;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    article:hover {
+      border-color: var(--gold-champagne);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 0 20px var(--gold-glow);
+    }
+
+    article h3 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--gold-champagne);
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      color: var(--gold-light);
+      opacity: 0.9;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(231, 201, 164, 0.1);
+    }
+
+    article ul {
+      list-style: none;
+    }
+
+    article li {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      opacity: 0.8;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    /* 客製化奢華金色小點 */
+    article li::before {
+      content: '•';
+      color: var(--gold-champagne);
+      font-size: 1.2rem;
+    }
+
+    /* ==========================================================================
+       💬 REVIEWS 顧客評論 - 沉浸式內心獨白
+       ========================================================================== */
+    #reviews {
+      padding: 8rem 4%;
+      text-align: center;
+      background: linear-gradient(180deg, transparent, rgba(5, 59, 41, 0.3), transparent);
+    }
+
+    .quote-box {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .quote-box h2 {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      line-height: 1.4;
+      font-style: italic;
+      color: var(--gold-champagne);
+      margin-bottom: 2rem;
+    }
+
+    .quote-box p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      opacity: 0.9;
+    }
+
+    /* ==========================================================================
+       📍 VISIT 造訪資訊與地圖
+       ========================================================================== */
+    #location {
+      padding: 7rem 4%;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    #location h2 {
+      margin-bottom: 1rem;
+    }
+
+    #location p {
+      font-size: 1.1rem;
+      font-weight: 300;
+      opacity: 0.8;
+      margin-bottom: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    /* ==========================================================================
+       🎌 FOOTER 頁尾
+       ========================================================================== */
+    footer {
+      padding: 4rem 4%;
+      text-align: center;
+      font-size: 0.85rem;
+      font-weight: 300;
+      opacity: 0.5;
+      letter-spacing: 1px;
+      border-top: 1px solid rgba(231, 201, 164, 0.05);
+    }
+
+    /* ==========================================================================
+       📱 行動裝置響應式優化 (Mobile Optimization)
+       ========================================================================== */
+    @media (max-width: 968px) {
+      .topbar { padding: 1.2rem 6%; }
+      .nav { display: none; } /* 行動端簡化導覽 */
+      
+      .hero { padding-top: 7rem; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+      }
+      h1 { font-size: 3.5rem; }
+      h2 { font-size: 1.8rem; }
+      .hero p { margin: 0 auto 2.5rem auto; }
+      .hero-actions { justify-content: center; }
+      
+      .quote-box h2 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="#" class="brand">MIYA</a>
+    <nav class="nav">
+      <a href="#services">療程選擇</a>
+      <a href="#reviews">深度體驗</a>
+      <a href="#location">預約造訪</a>
+    </nav>
+    <a class="btn btn-gold" href="#location">立即預約</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Vietnamese Hair Spa · Kaohsiung</div>
+          <h1>MIYA</h1>
+          <h2>不只是洗髮。<br>是一場讓靈魂卸重的極致療癒。</h2>
+          <p>天然草本精油、瀑布般溫柔的半圓水圈、雲朵般綿密的泡沫。下班後，給自己 70 分鐘，在靜謐的祖母綠微光中，讓指尖帶走所有城市的喧囂與壓力。</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#services">探索療程</a>
+            <a class="btn btn-outline" href="#reviews">看看好評</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="rating">5.0</div>
+          <div class="stars">★★★★★</div>
+          <h3>700+ Google 滿分盛讚</h3>
+          <small>「水圈瀑布太療癒了！」、「每次來都舒服到睡著」、「按摩力道非常到位、絕不推銷，CP值頂天。」</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>沉浸・方案選擇</h2>
+      <div class="services-grid">
+        <article>
+          <h3>經典越式頭皮舒壓</h3>
+          <p class="price">70 分鐘 / NT$ 990</p>
+          <ul>
+            <li>極致草本越式洗髮</li>
+            <li>半圓形水圈瀑布洗禮</li>
+            <li>頭皮經絡深層舒壓</li>
+            <li>肩頸釋壓放鬆按摩</li>
+            <li>水潤臉部清潔與高雅吹整</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>尊榮沉浸深度舒療</h3>
+          <p class="price">105 分鐘 / 深度釋壓</p>
+          <ul>
+            <li>加長型頭頸肩背完整舒壓</li>
+            <li>天然精油微粒頭皮洗禮</li>
+            <li>臉部高級保養與極致熱敷</li>
+            <li>重度疲勞者的靈魂避風港</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>VIP 雙人/專屬保養</h3>
+          <p class="price">客製化力道 / 採預約制</p>
+          <ul>
+            <li>尊享獨立安靜療癒空間</li>
+            <li>極致客製化按摩力道調配</li>
+            <li>完整頭皮環境與髮絲照護</li>
+            <li>情侶、閨蜜同行放鬆首選</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="quote-box">
+        <h2>“ People come for a wash.<br>They return for the feeling. ”</h2>
+        <p>「本來只是想洗個頭，沒想到靈魂在這裡徹底洗了個澡。」</p>
+      </div>
+    </section>
+
+    <section id="location">
+      <h2>Miya 越式洗髮館</h2>
+      <p>高雄市左營區華夏路 557 號附近（靠近生態園區站）</p>
+      <a class="btn btn-outline" href="https://maps.google.com" target="_blank">開啟 Google 地圖導航</a>
+    </section>
+  </main>
+
+  <footer>
+    © Miya Vietnamese Hair Spa. All Luxury Experience Reserved.
+  </footer>
+
+</body>
+</html>

@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Miya 越式洗髮館｜高雄放鬆療癒越式洗髮 SPA</title>
-  <meta name="description" content="Miya 越式洗髮館，位於高雄華夏路。70分鐘越式洗髮、肩頸按摩、臉部清潔、頭皮舒壓，一次完成。5.0 Google 好評，舒服到睡著的療癒體驗。" />
+  <title>Miya 越式洗髮館｜高雄頂級奢華頭皮舒療中心</title>
+  <meta name="description" content="Miya 越式洗髮館，高雄頂級越式洗髮奢華指標。結合五感美學與東方草本調配，提供極致半圓水圈瀑布、經絡深層按摩與頭皮奢華照護，讓身心體驗如雲端般的徹底釋放。" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Noto+Sans+TC:wght@200;300;400;500&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       💎 奢華祖母綠與香檳金核心設定 (Cinematic Luxury Vibe)
+       💎 世界級美學核心設定 (World-Class Luxury Palette)
        ========================================================================== */
     :root {
-      --emerald-deep: #032217;     /* 深沉祖母綠 - 暗色基調 */
-      --emerald-mid: #053b29;      /* 奢華經典綠 - 漸層過渡 */
-      --gold-champagne: #E7C9A4;  /* 霧面香檳金 - 點綴與邊框 */
-      --gold-light: #f5efe6;      /* 暖陽奶油白 - 主要文字 */
-      --gold-glow: rgba(231, 201, 164, 0.15); /* 金色療癒微光 */
-      --font-serif: 'Cormorant Garamond', 'Noto Serif TC', serif;
+      --emerald-deep: #021a12;     /* 靜謐深邃黑綠 */
+      --emerald-mid: #043324;      /* 皇家奢華祖母綠 */
+      --emerald-light: #074d37;    /* 翡翠綠微光 */
+      --gold-champagne: #E7C9A4;  /* 頂級香檳霧金 */
+      --gold-muted: #c2ab8d;      /* 內斂古典金 */
+      --gold-light: #f7f4ef;      /* 暖陽白瓷色 */
+      --font-serif: 'Cormorant Garamond', serif;
       --font-sans: 'Noto Sans TC', sans-serif;
     }
 
-    /* 基礎重設，打造如流水般的柔順感 */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -37,23 +37,31 @@
       color: var(--gold-light);
       font-family: var(--font-sans);
       -webkit-font-smoothing: antialiased;
+      letter-spacing: 0.05em;
     }
 
     body {
       overflow-x: hidden;
-      /* 模擬光影與水面折射的動態背景 */
-      background: radial-gradient(circle at 80% 20%, var(--emerald-mid) 0%, var(--emerald-deep) 70%);
+      /* 模擬高檔奢華水療的流動光影背景 */
+      background: radial-gradient(circle at 90% 10%, var(--emerald-mid) 0%, var(--emerald-deep) 60%);
       background-attachment: fixed;
     }
 
     a {
       color: inherit;
       text-decoration: none;
-      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+      transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* 內文全域排版 */
+    p {
+      font-weight: 200;
+      line-height: 1.8;
+      opacity: 0.85;
     }
 
     /* ==========================================================================
-       🧭 頂部導覽列 - 輕奢磨砂玻璃質感
+       🧭 頂部導覽列 - 奢華飯店式磨砂玻璃
        ========================================================================== */
     .topbar {
       position: fixed;
@@ -64,52 +72,67 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 4%;
-      background: rgba(3, 34, 23, 0.75);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(231, 201, 164, 0.1);
+      padding: 1.8rem 5%;
+      background: rgba(2, 26, 18, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(231, 201, 164, 0.08);
     }
 
     .brand {
       font-family: var(--font-serif);
-      font-size: 1.8rem;
-      letter-spacing: 4px;
-      font-weight: 600;
+      font-size: 2rem;
+      letter-spacing: 6px;
+      font-weight: 400;
       color: var(--gold-champagne);
-      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     .nav {
       display: flex;
-      gap: 2.5rem;
+      gap: 3rem;
     }
 
     .nav a {
-      font-size: 0.95rem;
-      letter-spacing: 1px;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
       font-weight: 300;
-      opacity: 0.8;
+      opacity: 0.7;
+      position: relative;
+    }
+
+    .nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      width: 0;
+      height: 1px;
+      background: var(--gold-champagne);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
     }
 
     .nav a:hover {
       opacity: 1;
       color: var(--gold-champagne);
-      text-shadow: 0 0 8px var(--gold-glow);
     }
 
-    /* 高級按鈕語法 */
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    /* 奢華高訂按鈕 */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.8rem 2rem;
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      border-radius: 0px; /* 直角設計更顯高雅犀利 */
+      padding: 0.9rem 2.5rem;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 400;
       cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
     .btn-gold {
@@ -118,126 +141,93 @@
     }
 
     .btn-gold:hover {
-      background-color: #f3e3ce;
-      box-shadow: 0 4px 20px var(--gold-glow);
+      background-color: #fcefe0;
+      box-shadow: 0 10px 30px rgba(231, 201, 164, 0.2);
       transform: translateY(-2px);
     }
 
     .btn-outline {
-      border: 1px solid rgba(231, 201, 164, 0.4);
+      border: 1px solid rgba(231, 201, 164, 0.3);
       color: var(--gold-champagne);
     }
 
     .btn-outline:hover {
       border-color: var(--gold-champagne);
-      background: rgba(231, 201, 164, 0.05);
+      background: rgba(231, 201, 164, 0.03);
       transform: translateY(-2px);
     }
 
     /* ==========================================================================
-       🎬 HERO 主視覺區 - 沉浸式劇本開場
+       🎬 HERO 劇場級奢華開場
        ========================================================================== */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 8rem 4% 4rem 4%;
-      position: relative;
-    }
-
-    /* 背景柔和呼吸光暈 - 模擬微光與水霧 */
-    .hero::before {
-      content: '';
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(231, 201, 164, 0.08) 0%, transparent 70%);
-      top: 20%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      animation: pulseGlow 8s infinite alternate;
-    }
-
-    @keyframes pulseGlow {
-      0% { opacity: 0.6; transform: translate(-50%, -50%) scale(0.9); }
-      100% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+      padding: 10rem 5% 5rem 5%;
     }
 
     .hero-inner {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
-      gap: 4rem;
+      gap: 5rem;
       align-items: center;
     }
 
     .eyebrow {
       font-family: var(--font-serif);
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: var(--gold-champagne);
-      letter-spacing: 3px;
-      margin-bottom: 1rem;
+      letter-spacing: 4px;
+      margin-bottom: 1.5rem;
       text-transform: uppercase;
     }
 
     h1 {
       font-family: var(--font-serif);
-      font-size: 4.5rem;
-      font-weight: 400;
-      letter-spacing: 6px;
+      font-size: 5.5rem;
+      font-weight: 300;
+      letter-spacing: 8px;
       color: var(--gold-champagne);
-      line-height: 1.1;
-      margin-bottom: 1rem;
+      line-height: 1;
+      margin-bottom: 1.5rem;
     }
 
-    h2 {
+    h2.hero-sub {
       font-family: var(--font-serif);
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       font-weight: 300;
       line-height: 1.4;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       color: var(--gold-light);
     }
 
     .hero p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      opacity: 0.85;
-      margin-bottom: 2.5rem;
-      max-width: 600px;
-      font-weight: 300;
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      max-width: 650px;
     }
 
     .hero-actions {
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
-    /* 右側五星口碑懸浮卡片 */
+    /* 口碑卡片 */
     .hero-card {
-      background: rgba(5, 59, 41, 0.4);
-      border: 1px solid rgba(231, 201, 164, 0.2);
-      padding: 3rem 2.5rem;
+      background: linear-gradient(135deg, rgba(4, 51, 36, 0.4) 0%, rgba(2, 26, 18, 0.6) 100%);
+      border: 1px solid rgba(231, 201, 164, 0.15);
+      padding: 4rem 3rem;
       text-align: center;
-      position: relative;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-      backdrop-filter: blur(8px);
-    }
-
-    .hero-card::after {
-      content: '';
-      position: absolute;
-      inset: 5px;
-      border: 1px solid rgba(231, 201, 164, 0.05);
-      pointer-events: none;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.5);
     }
 
     .rating {
       font-family: var(--font-serif);
-      font-size: 4rem;
+      font-size: 4.5rem;
       color: var(--gold-champagne);
       line-height: 1;
       margin-bottom: 0.5rem;
@@ -245,80 +235,144 @@
 
     .stars {
       color: var(--gold-champagne);
-      letter-spacing: 4px;
+      letter-spacing: 6px;
       margin-bottom: 1.5rem;
-      font-size: 1.1rem;
-    }
-
-    .hero-card h3 {
-      font-size: 1.2rem;
-      letter-spacing: 1px;
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
-
-    .hero-card small {
-      display: block;
-      font-size: 0.9rem;
-      opacity: 0.7;
-      line-height: 1.6;
-      font-weight: 300;
     }
 
     /* ==========================================================================
-       🧘 SERVICES 療程選擇 - 高級精品排版
+       ⚜️ PHILOSOPHY 品牌五感哲學 (新增：增加網頁深度與長度)
        ========================================================================== */
-    #services {
-      padding: 7rem 4%;
-      max-width: 1200px;
+    .philosophy {
+      padding: 10rem 5%;
+      max-width: 1300px;
       margin: 0 auto;
+      border-top: 1px solid rgba(231, 201, 164, 0.05);
     }
 
-    section h2 {
-      font-family: var(--font-serif);
-      font-size: 2.8rem;
+    .section-header {
       text-align: center;
+      max-width: 700px;
+      margin: 0 auto 6rem auto;
+    }
+
+    .section-header span {
+      font-family: var(--font-serif);
       color: var(--gold-champagne);
-      margin-bottom: 4rem;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-serif);
+      font-size: 3.2rem;
+      font-weight: 300;
+      letter-spacing: 3px;
+      color: var(--gold-champagne);
+    }
+
+    .senses-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+
+    .sense-item {
+      padding: 2.5rem;
+      background: rgba(2, 26, 18, 0.3);
+      border-left: 1px solid rgba(231, 201, 164, 0.2);
+    }
+
+    .sense-item h3 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      color: var(--gold-champagne);
+      margin-bottom: 1rem;
       font-weight: 400;
+    }
+
+    /* ==========================================================================
+       🌊 THE RITUAL 沉浸式七大步驟 (新增：世界級網頁必備故事感)
+       ========================================================================== */
+    .journey-section {
+      background: rgba(4, 51, 36, 0.15);
+      padding: 10rem 5%;
+    }
+
+    .timeline {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .timeline-num {
+      font-family: var(--font-serif);
+      font-size: 3rem;
+      color: rgba(231, 201, 164, 0.3);
+      font-style: italic;
+      line-height: 1;
+      border-bottom: 1px solid rgba(231, 201, 164, 0.2);
+      padding-bottom: 0.5rem;
+    }
+
+    .timeline-content h3 {
+      font-size: 1.4rem;
+      color: var(--gold-champagne);
+      margin-bottom: 0.8rem;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       🧘 SERVICES 療程方案
+       ========================================================================== */
+    #services {
+      padding: 10rem 5%;
+      max-width: 1300px;
+      margin: 0 auto;
     }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 3rem;
     }
 
     article {
-      background: rgba(3, 34, 23, 0.6);
-      border: 1px solid rgba(231, 201, 164, 0.15);
-      padding: 3.5rem 2.5rem;
-      transition: all 0.4s ease;
-      position: relative;
+      background: rgba(2, 26, 18, 0.5);
+      border: 1px solid rgba(231, 201, 164, 0.12);
+      padding: 4.5rem 3.5rem;
+      transition: all 0.5s ease;
     }
 
     article:hover {
       border-color: var(--gold-champagne);
       transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 0 20px var(--gold-glow);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.6);
     }
 
     article h3 {
       font-family: var(--font-serif);
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: var(--gold-champagne);
       margin-bottom: 0.5rem;
-      font-weight: 400;
-      letter-spacing: 1px;
+      font-weight: 300;
     }
 
     .price {
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-      color: var(--gold-light);
-      opacity: 0.9;
-      margin-bottom: 2rem;
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      color: var(--gold-muted);
+      margin-bottom: 2.5rem;
       padding-bottom: 1rem;
       border-bottom: 1px solid rgba(231, 201, 164, 0.1);
     }
@@ -328,106 +382,120 @@
     }
 
     article li {
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
       opacity: 0.8;
-      font-weight: 300;
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 1rem;
+      font-weight: 200;
     }
 
-    /* 客製化奢華金色小點 */
     article li::before {
-      content: '•';
+      content: '†';
       color: var(--gold-champagne);
-      font-size: 1.2rem;
+      font-family: var(--font-serif);
     }
 
     /* ==========================================================================
-       💬 REVIEWS 顧客評論 - 沉浸式內心獨白
+       💬 REVIEWS 詩意口碑
        ========================================================================== */
     #reviews {
-      padding: 8rem 4%;
+      padding: 12rem 5%;
       text-align: center;
-      background: linear-gradient(180deg, transparent, rgba(5, 59, 41, 0.3), transparent);
-    }
-
-    .quote-box {
-      max-width: 800px;
-      margin: 0 auto;
+      background: linear-gradient(180deg, transparent, rgba(4, 51, 36, 0.2), transparent);
     }
 
     .quote-box h2 {
       font-family: var(--font-serif);
-      font-size: 3rem;
+      font-size: 3.5rem;
       line-height: 1.4;
       font-style: italic;
       color: var(--gold-champagne);
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
     }
 
     .quote-box p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 300;
-      letter-spacing: 2px;
-      opacity: 0.9;
+      color: var(--gold-muted);
     }
 
     /* ==========================================================================
-       📍 VISIT 造訪資訊與地圖
+       ❓ FAQ 常見答疑 (新增：世界級高階沙龍必備信任區塊)
+       ========================================================================== */
+    .faq-section {
+      padding: 10rem 5%;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(231, 201, 164, 0.05);
+    }
+
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .faq-item {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(231, 201, 164, 0.1);
+    }
+
+    .faq-item h4 {
+      font-size: 1.1rem;
+      color: var(--gold-champagne);
+      margin-bottom: 0.8rem;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       📍 VISIT 地圖與造訪 (已導入專屬連結)
        ========================================================================== */
     #location {
-      padding: 7rem 4%;
+      padding: 10rem 5%;
       text-align: center;
-      max-width: 600px;
+      max-width: 750px;
       margin: 0 auto;
     }
 
-    #location h2 {
-      margin-bottom: 1rem;
-    }
-
     #location p {
-      font-size: 1.1rem;
-      font-weight: 300;
-      opacity: 0.8;
-      margin-bottom: 2.5rem;
-      letter-spacing: 1px;
+      font-size: 1.2rem;
+      margin-bottom: 3.5rem;
     }
 
     /* ==========================================================================
        🎌 FOOTER 頁尾
        ========================================================================== */
     footer {
-      padding: 4rem 4%;
+      padding: 5rem 5%;
       text-align: center;
       font-size: 0.85rem;
-      font-weight: 300;
-      opacity: 0.5;
-      letter-spacing: 1px;
+      font-weight: 200;
+      opacity: 0.4;
+      letter-spacing: 2px;
       border-top: 1px solid rgba(231, 201, 164, 0.05);
     }
 
     /* ==========================================================================
-       📱 行動裝置響應式優化 (Mobile Optimization)
+       📱 行動端完美極致響應優化
        ========================================================================== */
+    @media (max-width: 1024px) {
+      .senses-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+
     @media (max-width: 968px) {
-      .topbar { padding: 1.2rem 6%; }
-      .nav { display: none; } /* 行動端簡化導覽 */
-      
-      .hero { padding-top: 7rem; }
-      .hero-inner {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-      }
-      h1 { font-size: 3.5rem; }
-      h2 { font-size: 1.8rem; }
-      .hero p { margin: 0 auto 2.5rem auto; }
+      .topbar { padding: 1.5rem 6%; }
+      .nav { display: none; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 4rem; }
+      h1 { font-size: 4rem; }
+      h2.hero-sub { font-size: 2rem; }
+      .hero p { margin: 0 auto 3rem auto; }
       .hero-actions { justify-content: center; }
-      
-      .quote-box h2 { font-size: 2rem; }
+      .section-header h2 { font-size: 2.4rem; }
+      .quote-box h2 { font-size: 2.2rem; }
+      .timeline-item { grid-template-columns: 60px 1fr; gap: 1.5rem; }
     }
   </style>
 </head>
@@ -436,70 +504,153 @@
   <header class="topbar">
     <a href="#" class="brand">MIYA</a>
     <nav class="nav">
-      <a href="#services">療程選擇</a>
-      <a href="#reviews">深度體驗</a>
+      <a href="#philosophy">五感美學</a>
+      <a href="#journey">舒療步驟</a>
+      <a href="#services">療程方案</a>
       <a href="#location">預約造訪</a>
     </nav>
-    <a class="btn btn-gold" href="#location">立即預約</a>
+    <a class="btn btn-gold" href="#location">Reservation</a>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-inner">
         <div>
-          <div class="eyebrow">Vietnamese Hair Spa · Kaohsiung</div>
+          <div class="eyebrow">The Ultimate Vietnamese Hair Spa Center</div>
           <h1>MIYA</h1>
-          <h2>不只是洗髮。<br>是一場讓靈魂卸重的極致療癒。</h2>
-          <p>天然草本精油、瀑布般溫柔的半圓水圈、雲朵般綿密的泡沫。下班後，給自己 70 分鐘，在靜謐的祖母綠微光中，讓指尖帶走所有城市的喧囂與壓力。</p>
+          <h2 class="hero-sub">非凡的洗髮儀式。<br>讓靈魂與肉體在此優雅和解。</h2>
+          <p>踏入這裡，城市的喧囂戛然而止。Miya 融合古典東方草本學與當代沉浸式奢華水療，以溫度、流水、指尖、香氛，為渴望釋放的都市高壓靈魂，譜寫一曲長達 70 分鐘的療癒交響樂。</p>
           <div class="hero-actions">
-            <a class="btn btn-gold" href="#services">探索療程</a>
-            <a class="btn btn-outline" href="#reviews">看看好評</a>
+            <a class="btn btn-gold" href="#services">Explore Menu</a>
+            <a class="btn btn-outline" href="#reviews">Reviews</a>
           </div>
         </div>
 
         <div class="hero-card">
           <div class="rating">5.0</div>
           <div class="stars">★★★★★</div>
-          <h3>700+ Google 滿分盛讚</h3>
-          <small>「水圈瀑布太療癒了！」、「每次來都舒服到睡著」、「按摩力道非常到位、絕不推銷，CP值頂天。」</small>
+          <h3>700+ 尊榮至臻評價</h3>
+          <small>「流水與指尖的節奏完美無瑕，推開門的那一刻，疲憊就已經開始融化了。」</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="philosophy" class="philosophy">
+      <div class="section-header">
+        <span>The Five Senses</span>
+        <h2>一場關於五感的朝聖</h2>
+      </div>
+      <div class="senses-grid">
+        <div class="sense-item">
+          <h3>聽覺之境 · ASMR</h3>
+          <p>半圓水圈落下的綿密瀑布聲，與空間中流淌的靜謐頌缽，交織成讓大腦瞬間安靜的催眠曲。</p>
+        </div>
+        <div class="sense-item">
+          <h3>嗅覺之療 · Herbal</h3>
+          <p>天然新鮮香茅、老薑與嚴選精油在溫水中慢火熬製，隨水蒸氣氤氳而上，由呼吸道深度放鬆神經。</p>
+        </div>
+        <div class="sense-item">
+          <h3>觸覺之藝 · Massage</h3>
+          <p>不落俗套的經絡舒壓技法，指尖力道精準拿捏，揉開每一處僵硬的頭皮與肩頸線條。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="journey" class="journey-section">
+      <div class="section-header">
+        <span>The Journey</span>
+        <h2>沉浸・七大水療儀式</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-num">01</div>
+          <div class="timeline-content">
+            <h3>植萃靜心迎賓</h3>
+            <p>奉上一杯溫熱的草本茶，透過香氣調合呼吸，將心靈頻率調整至最放鬆的狀態。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-num">02</div>
+          <div class="timeline-content">
+            <h3>肩頸與面部深度卸壓</h3>
+            <p>專業手法揉捻僵硬肌群，並進行溫和的面部清潔與穴位舒緩，喚醒肌膚澄淨感。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-num">03</div>
+          <div class="timeline-content">
+            <h3>草本精油微粒洗禮</h3>
+            <p>使用溫熱草本熬製湯水，綿密如雲朵的泡沫溫柔包裹每一根髮絲，帶走頭皮深層油脂。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-num">04</div>
+          <div class="timeline-content">
+            <h3>經典水圈瀑布療法</h3>
+            <p>啟動半圓形循環水圈，恆溫水流如流瀑般綿延傾瀉於額頭與髮際，達到極致的顱內共鳴放鬆。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-num">05</div>
+          <div class="timeline-content">
+            <h3>頭皮經絡至臻舒壓</h3>
+            <p>針對百會穴、風池穴等關鍵頭部穴位進行深度按壓，徹底釋放長期累積的大腦高壓與緊繃。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-num">06</div>
+          <div class="timeline-content">
+            <h3>草本微霧熱敷蒸薰</h3>
+            <p>以微霧溫熱包覆頭部與頸椎，促進血液循環，讓髮絲深層吸收植物滋養精華。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-num">07</div>
+          <div class="timeline-content">
+            <h3>高級沙龍吹整與甦醒</h3>
+            <p>在如絲綢般的微風吹整下，秀髮重現健康高雅光澤，帶著輕盈的身心優雅回歸日常。</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="services">
-      <h2>沉浸・方案選擇</h2>
+      <div class="section-header">
+        <span>The Menu</span>
+        <h2>奢華舒療方案</h2>
+      </div>
       <div class="services-grid">
         <article>
-          <h3>經典越式頭皮舒壓</h3>
-          <p class="price">70 分鐘 / NT$ 990</p>
+          <h3>經典越式頭皮舒療</h3>
+          <p class="price">70 Mins / NT$ 990</p>
           <ul>
-            <li>極致草本越式洗髮</li>
-            <li>半圓形水圈瀑布洗禮</li>
-            <li>頭皮經絡深層舒壓</li>
-            <li>肩頸釋壓放鬆按摩</li>
-            <li>水潤臉部清潔與高雅吹整</li>
+            <li>極致草本越式洗髮儀式</li>
+            <li>半圓形恆溫水圈瀑布舒壓</li>
+            <li>頭皮核心經絡精準釋壓</li>
+            <li>肩頸線條精油放鬆按摩</li>
+            <li>水潤面部清潔與高級吹整</li>
           </ul>
         </article>
 
         <article>
-          <h3>尊榮沉浸深度舒療</h3>
-          <p class="price">105 分鐘 / 深度釋壓</p>
+          <h3>尊榮沉浸深度御療</h3>
+          <p class="price">105 Mins / 深度釋壓首選</p>
           <ul>
-            <li>加長型頭頸肩背完整舒壓</li>
-            <li>天然精油微粒頭皮洗禮</li>
-            <li>臉部高級保養與極致熱敷</li>
-            <li>重度疲勞者的靈魂避風港</li>
+            <li>加長型頭、頸、肩、背完整巡航舒壓</li>
+            <li>高階精油微粒頭皮毛囊健康洗禮</li>
+            <li>面部高級活膚保養與眼周極致熱敷</li>
+            <li>獻給重度高壓都市高階經理人的避風港</li>
           </ul>
         </article>
 
         <article>
-          <h3>VIP 雙人/專屬保養</h3>
-          <p class="price">客製化力道 / 採預約制</p>
+          <h3>VIP 專屬客製化保養</h3>
+          <p class="price">Tailored / 完全預約制</p>
           <ul>
-            <li>尊享獨立安靜療癒空間</li>
-            <li>極致客製化按摩力道調配</li>
-            <li>完整頭皮環境與髮絲照護</li>
-            <li>情侶、閨蜜同行放鬆首選</li>
+            <li>尊享全獨立全私密靜謐療癒空間</li>
+            <li>依據當日疲勞度客製化力道與技法調整</li>
+            <li>尊享全程頂級沙龍專屬洗護與頭皮照護</li>
+            <li>極度適合重視隱私之高品味貴賓與伴侶</li>
           </ul>
         </article>
       </div>
@@ -508,19 +659,43 @@
     <section id="reviews">
       <div class="quote-box">
         <h2>“ People come for a wash.<br>They return for the feeling. ”</h2>
-        <p>「本來只是想洗個頭，沒想到靈魂在這裡徹底洗了個澡。」</p>
+        <p>「這不是一次消費，而是一場讓靈魂洗澡的朝聖儀式。」</p>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="section-header">
+        <span>FAQ</span>
+        <h2>預約答疑</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>Q. 需要提前預約嗎？</h4>
+          <p>為了確保每位貴賓都能享受到最完美的五感環境與專屬服務服務，Miya 採全預約制，建議您提前 3-5 天進行預約。</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q. 男生也可以體驗越式洗髮舒療嗎？</h4>
+          <p>當然可以。我們的療程專為放鬆現代人的高壓大腦與肩頸設計，不分性別，皆能在此獲得極致的舒適體驗。</p>
+        </div>
+        <div class="faq-item">
+          <h4>Q. 有接睫毛或化妝可以進行療程嗎？</h4>
+          <p>可以的。療程前我們的美療師會與您溝通，面部清潔部分可依據您的需求調整，避開眼周接睫毛區域，或保留精緻妝容。</p>
+        </div>
       </div>
     </section>
 
     <section id="location">
-      <h2>Miya 越式洗髮館</h2>
-      <p>高雄市左營區華夏路 557 號附近（靠近生態園區站）</p>
-      <a class="btn btn-outline" href="https://maps.google.com" target="_blank">開啟 Google 地圖導航</a>
+      <div class="section-header">
+        <span>Visit Us</span>
+        <h2>Miya 越式洗髮館</h2>
+      </div>
+      <p>高雄市左營區華夏路 557 號附近（捷運生態園區站步行可達）</p>
+      <a class="btn btn-outline" href="https://maps.app.goo.gl/HHhDSQkYWtrYTjUy8" target="_blank">開啟 Google 地圖至臻導航</a>
     </section>
   </main>
 
   <footer>
-    © Miya Vietnamese Hair Spa. All Luxury Experience Reserved.
+    © Miya Vietnamese Hair Spa. All World-Class Luxury Experience Reserved.
   </footer>
 
 </body>

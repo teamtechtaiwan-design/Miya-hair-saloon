@@ -1,36 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
 <head>
-
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="metaTitle">Miya 越式洗髮館｜高雄左營奢華越式洗髮・頭皮舒壓・肩頸放鬆</title>
+  <meta name="description" content="Miya 越式洗髮館位於高雄左營華夏路557號。主打越式洗髮、頭皮舒壓、肩頸按摩、臉部清潔、香草水療與深度放鬆。" />
 
-  <title>
-    Miya 越式洗髮館｜高雄左營奢華越式洗髮・頭皮舒壓・肩頸放鬆
-  </title>
-
-  <meta name="description"
-        content="Miya 越式洗髮館位於高雄左營華夏路557號。主打越式洗髮、頭皮舒壓、肩頸按摩、臉部清潔、香草水療與深度放鬆。">
-
-  <!-- Google Fonts -->
-
-  <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-  <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
   <style>
-
     :root{
-
       --emerald:#043927;
       --emerald-dark:#021a12;
       --gold:#e7c9a4;
@@ -40,828 +22,496 @@
       --radius:28px;
     }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
     body{
-
       font-family:"Noto Sans TC",sans-serif;
-
       background:
-      radial-gradient(circle at top right,
-      rgba(10,77,54,.9),
-      transparent 30%),
-
-      linear-gradient(
-      180deg,
-      #021a12,
-      #031712);
-
+        radial-gradient(circle at top right, rgba(10,77,54,.9), transparent 30%),
+        linear-gradient(180deg,#021a12,#031712);
       color:var(--cream);
-
       line-height:1.8;
-
       overflow-x:hidden;
     }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      width:100%;
-      display:block;
-      object-fit:cover;
-    }
-
-    /* =========================
-       TOPBAR
-    ========================== */
+    a{text-decoration:none;color:inherit;}
+    img{width:100%;display:block;object-fit:cover;}
 
     .topbar{
-
-      position:fixed;
-
-      top:0;
-      left:0;
-
-      width:100%;
-
-      z-index:1000;
-
+      position:fixed;top:0;left:0;width:100%;z-index:1000;
       backdrop-filter:blur(20px);
-
       background:rgba(2,26,18,.8);
-
       border-bottom:1px solid var(--line);
     }
-
     .nav{
-
-      max-width:1280px;
-
-      margin:auto;
-
-      padding:18px 24px;
-
-      display:flex;
-
-      align-items:center;
-
-      justify-content:space-between;
+      max-width:1280px;margin:auto;padding:18px 24px;
+      display:flex;align-items:center;justify-content:space-between;gap:20px;
     }
-
     .brand{
-
-      display:flex;
-
-      align-items:center;
-
-      gap:12px;
-
-      color:var(--gold);
-
-      font-family:"Cormorant Garamond",serif;
-
-      letter-spacing:4px;
-
-      font-size:28px;
+      display:flex;align-items:center;gap:12px;color:var(--gold);
+      font-family:"Cormorant Garamond",serif;letter-spacing:4px;font-size:28px;
+      white-space:nowrap;
     }
-
     .logo{
-
-      width:42px;
-
-      height:42px;
-
-      border-radius:50%;
-
-      border:1px solid var(--gold);
-
-      display:grid;
-
-      place-items:center;
+      width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);
+      display:grid;place-items:center;
     }
-
-    .nav-links{
-
-      display:flex;
-
-      gap:28px;
-
-      align-items:center;
-    }
-
-    .nav-links a{
-
-      font-size:14px;
-
-      color:rgba(255,246,232,.7);
-    }
-
-    .nav-links a:hover{
-
-      color:var(--gold);
-    }
-
-    /* =========================
-       BUTTONS
-    ========================== */
+    .nav-links{display:flex;gap:28px;align-items:center;}
+    .nav-links a{font-size:14px;color:rgba(255,246,232,.7);}
+    .nav-links a:hover{color:var(--gold);}
 
     .btn{
-
-      display:inline-flex;
-
-      align-items:center;
-
-      justify-content:center;
-
-      padding:14px 26px;
-
-      border-radius:999px;
-
-      font-weight:700;
-
-      transition:.3s ease;
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:14px 26px;border-radius:999px;font-weight:700;transition:.3s ease;
+      cursor:pointer;border:0;white-space:nowrap;
     }
+    .btn:hover{transform:translateY(-2px);}
+    .btn-gold{background:var(--gold);color:var(--emerald-dark);}
+    .btn-line{background:#06c755;color:white;}
+    .btn-outline{border:1px solid rgba(231,201,164,.4);color:var(--gold);background:transparent;}
 
-    .btn:hover{
-
-      transform:translateY(-2px);
-    }
-
-    .btn-gold{
-
-      background:var(--gold);
-
-      color:var(--emerald-dark);
-    }
-
-    .btn-line{
-
-      background:#06c755;
-
-      color:white;
-    }
-
-    .btn-outline{
-
-      border:1px solid rgba(231,201,164,.4);
-
-      color:var(--gold);
-    }
-
-    /* =========================
-       HERO
-    ========================== */
-
-    .hero{
-
-      min-height:100vh;
-
-      display:flex;
-
-      align-items:center;
-
-      padding:140px 24px 80px;
-    }
-
+    .hero{min-height:100vh;display:flex;align-items:center;padding:140px 24px 80px;}
     .hero-inner{
-
-      max-width:1280px;
-
-      margin:auto;
-
-      display:grid;
-
-      grid-template-columns:1fr 1fr;
-
-      gap:50px;
-
-      align-items:center;
+      max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;
+      gap:50px;align-items:center;
     }
-
     .eyebrow{
-
-      color:var(--gold);
-
-      letter-spacing:5px;
-
-      font-size:16px;
-
-      margin-bottom:18px;
-
+      color:var(--gold);letter-spacing:5px;font-size:16px;margin-bottom:18px;
       font-family:"Cormorant Garamond",serif;
     }
-
     h1{
-
-      font-family:"Cormorant Garamond",serif;
-
-      font-size:100px;
-
-      line-height:.9;
-
-      color:var(--gold);
-
-      margin-bottom:20px;
-
-      font-weight:300;
+      font-family:"Cormorant Garamond",serif;font-size:100px;line-height:.9;
+      color:var(--gold);margin-bottom:20px;font-weight:300;
     }
-
-    .hero h2{
-
-      font-size:46px;
-
-      line-height:1.3;
-
-      margin-bottom:22px;
-    }
-
-    .lead{
-
-      color:rgba(255,246,232,.76);
-
-      font-size:18px;
-
-      margin-bottom:32px;
-    }
-
-    .hero-actions{
-
-      display:flex;
-
-      gap:14px;
-
-      flex-wrap:wrap;
-    }
-
-    .trust-grid{
-
-      margin-top:32px;
-
-      display:grid;
-
-      grid-template-columns:repeat(4,1fr);
-
-      gap:12px;
-    }
-
-    .trust{
-
-      border:1px solid var(--line);
-
-      border-radius:20px;
-
-      padding:18px;
-
-      background:rgba(255,255,255,.04);
-    }
-
-    .trust strong{
-
-      display:block;
-
-      color:var(--gold);
-
-      font-size:24px;
-    }
-
-    .trust span{
-
-      font-size:13px;
-
-      color:rgba(255,246,232,.7);
-    }
-
-    /* =========================
-       HERO GALLERY
-    ========================== */
-
-    .hero-gallery{
-
-      display:grid;
-
-      grid-template-columns:1fr 1fr;
-
-      gap:16px;
-    }
-
-    .hero-photo{
-
-      border-radius:30px;
-
-      overflow:hidden;
-
-      min-height:260px;
-
-      border:1px solid var(--line);
-
-      box-shadow:var(--shadow);
-    }
-
-    .hero-photo.big{
-
-      grid-row:span 2;
-
-      min-height:540px;
-    }
-
-    /* =========================
-       SECTION
-    ========================== */
-
-    section{
-
-      padding:90px 24px;
-    }
-
-    .container{
-
-      max-width:1280px;
-
-      margin:auto;
-    }
-
-    .section-head{
-
-      text-align:center;
-
-      max-width:820px;
-
-      margin:0 auto 50px;
-    }
-
-    .mini{
-
-      color:var(--gold);
-
-      letter-spacing:4px;
-
-      margin-bottom:10px;
-
-      display:block;
-
-      font-family:"Cormorant Garamond",serif;
-    }
-
-    .section-head h2{
-
-      font-size:54px;
-
-      line-height:1.2;
-
-      margin-bottom:16px;
-
-      color:var(--gold);
-    }
-
-    .section-head p{
-
-      color:rgba(255,246,232,.72);
-    }
-
-    /* =========================
-       SERVICES
-    ========================== */
-
-    .services-grid{
-
-      display:grid;
-
-      grid-template-columns:repeat(3,1fr);
-
-      gap:24px;
-    }
-
-    .package{
-
-      border:1px solid var(--line);
-
-      border-radius:34px;
-
-      padding:34px;
-
-      background:rgba(255,255,255,.04);
-    }
-
-    .package.featured{
-
-      border-color:rgba(231,201,164,.5);
-
-      background:rgba(231,201,164,.06);
-    }
-
-    .tag{
-
-      display:inline-block;
-
-      border:1px solid var(--line);
-
-      border-radius:999px;
-
-      padding:6px 12px;
-
-      color:var(--gold);
-
-      margin-bottom:20px;
-
-      font-size:13px;
-    }
-
-    .package h3{
-
-      color:var(--gold);
-
-      font-size:34px;
-
-      margin-bottom:6px;
-    }
-
-    .price{
-
-      font-size:28px;
-
-      margin-bottom:22px;
-    }
-
-    .package ul{
-
-      list-style:none;
-
-      margin-bottom:28px;
-    }
-
-    .package li{
-
-      margin:12px 0;
-
-      color:rgba(255,246,232,.75);
-    }
-
-    /* =========================
-       GALLERY
-    ========================== */
-
-    .photo-grid{
-
-      display:grid;
-
-      grid-template-columns:repeat(4,1fr);
-
-      gap:16px;
-    }
-
-    .photo{
-
-      border-radius:28px;
-
-      overflow:hidden;
-
-      min-height:250px;
-
-      border:1px solid var(--line);
-    }
-
-    .photo.tall{
-
-      grid-row:span 2;
-
-      min-height:520px;
-    }
-
-    .photo.wide{
-
-      grid-column:span 2;
-    }
-
-    /* =========================
-       REVIEWS
-    ========================== */
-
-    .reviews-grid{
-
-      display:grid;
-
-      grid-template-columns:repeat(3,1fr);
-
-      gap:20px;
-    }
-
-    .review{
-
-      border:1px solid var(--line);
-
-      border-radius:28px;
-
-      padding:28px;
-
-      background:rgba(255,255,255,.04);
-    }
-
-    .stars{
-
-      color:var(--gold);
-
-      letter-spacing:4px;
-
-      margin-bottom:12px;
-    }
-
-    .review p{
-
-      color:rgba(255,246,232,.8);
-
-      margin-bottom:16px;
-    }
-
-    .review strong{
-
-      color:var(--gold);
-    }
-
-    /* =========================
-       VISIT
-    ========================== */
-
-    .visit-card{
-
-      display:grid;
-
-      grid-template-columns:1fr 1fr;
-
-      gap:30px;
-
-      border:1px solid var(--line);
-
-      border-radius:40px;
-
-      padding:40px;
-
-      background:rgba(255,255,255,.04);
-    }
-
-    .visit-card h2{
-
-      font-size:52px;
-
-      line-height:1.2;
-
-      margin-bottom:20px;
-
-      color:var(--gold);
-    }
-
-    .info-list{
-
-      margin:26px 0;
-
-      display:grid;
-
-      gap:12px;
-
-      color:rgba(255,246,232,.75);
-    }
-
-    .mapbox{
-
-      min-height:380px;
-
-      border-radius:30px;
-
-      overflow:hidden;
-
-      border:1px solid var(--line);
-
-      background:url("assets/miya-4.png") center/cover;
-    }
-
-    /* =========================
-       LANGUAGE SWITCHER
-    ========================== */
+    .hero h2{font-size:46px;line-height:1.3;margin-bottom:22px;}
+    .lead{color:rgba(255,246,232,.76);font-size:18px;margin-bottom:32px;}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+
+    .trust-grid{margin-top:32px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+    .trust{border:1px solid var(--line);border-radius:20px;padding:18px;background:rgba(255,255,255,.04);}
+    .trust strong{display:block;color:var(--gold);font-size:24px;}
+    .trust span{font-size:13px;color:rgba(255,246,232,.7);}
+
+    .hero-gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .hero-photo{border-radius:30px;overflow:hidden;min-height:260px;border:1px solid var(--line);box-shadow:var(--shadow);}
+    .hero-photo.big{grid-row:span 2;min-height:540px;}
+    .hero-photo img{height:100%;}
+
+    section{padding:90px 24px;}
+    .container{max-width:1280px;margin:auto;}
+    .section-head{text-align:center;max-width:820px;margin:0 auto 50px;}
+    .mini{color:var(--gold);letter-spacing:4px;margin-bottom:10px;display:block;font-family:"Cormorant Garamond",serif;}
+    .section-head h2{font-size:54px;line-height:1.2;margin-bottom:16px;color:var(--gold);}
+    .section-head p{color:rgba(255,246,232,.72);}
+
+    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+    .story-card{border:1px solid var(--line);border-radius:34px;padding:34px;background:rgba(255,255,255,.04);}
+    .story-card h3{color:var(--gold);font-size:30px;margin-bottom:12px;}
+    .story-card p{color:rgba(255,246,232,.76);}
+
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .package{border:1px solid var(--line);border-radius:34px;padding:34px;background:rgba(255,255,255,.04);}
+    .package.featured{border-color:rgba(231,201,164,.5);background:rgba(231,201,164,.06);}
+    .tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--gold);margin-bottom:20px;font-size:13px;}
+    .package h3{color:var(--gold);font-size:34px;margin-bottom:6px;}
+    .price{font-size:28px;margin-bottom:22px;}
+    .package ul{list-style:none;margin-bottom:28px;}
+    .package li{margin:12px 0;color:rgba(255,246,232,.75);}
+
+    .photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+    .photo{border-radius:28px;overflow:hidden;min-height:250px;border:1px solid var(--line);}
+    .photo img{height:100%;}
+    .photo.tall{grid-row:span 2;min-height:520px;}
+    .photo.wide{grid-column:span 2;}
+
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+    .review{border:1px solid var(--line);border-radius:28px;padding:28px;background:rgba(255,255,255,.04);}
+    .stars{color:var(--gold);letter-spacing:4px;margin-bottom:12px;}
+    .review p{color:rgba(255,246,232,.8);margin-bottom:16px;}
+    .review strong{color:var(--gold);}
+
+    .faq-grid{display:grid;gap:16px;max-width:920px;margin:auto;}
+    details{border:1px solid var(--line);border-radius:24px;padding:22px 24px;background:rgba(255,255,255,.04);}
+    summary{cursor:pointer;color:var(--gold);font-weight:900;font-size:18px;}
+    details p{margin-top:12px;color:rgba(255,246,232,.75);}
+
+    .visit-card{display:grid;grid-template-columns:1fr 1fr;gap:30px;border:1px solid var(--line);border-radius:40px;padding:40px;background:rgba(255,255,255,.04);}
+    .visit-card h2{font-size:52px;line-height:1.2;margin-bottom:20px;color:var(--gold);}
+    .visit-card p{color:rgba(255,246,232,.76);}
+    .info-list{margin:26px 0;display:grid;gap:12px;color:rgba(255,246,232,.75);}
+    .info-list strong{color:var(--gold);display:inline-block;min-width:70px;}
+    .mapbox{min-height:380px;border-radius:30px;overflow:hidden;border:1px solid var(--line);background:url("assets/miya-4.png") center/cover;}
 
     .language-switcher{
-
-      position:fixed;
-
-      right:18px;
-
-      bottom:90px;
-
-      z-index:9999;
-
-      display:flex;
-
-      flex-direction:column;
-
-      gap:10px;
+      position:fixed;right:18px;bottom:90px;z-index:9999;
+      display:flex;flex-direction:column;gap:10px;
     }
-
     .language-switcher button{
-
-      background:rgba(2,26,18,.85);
-
-      color:#e7c9a4;
-
-      border:1px solid rgba(231,201,164,.35);
-
-      border-radius:999px;
-
-      padding:10px 16px;
-
-      cursor:pointer;
-
-      font-weight:700;
-
-      backdrop-filter:blur(14px);
-
+      background:rgba(2,26,18,.88);color:var(--gold);
+      border:1px solid rgba(231,201,164,.35);border-radius:999px;
+      padding:10px 16px;cursor:pointer;font-weight:800;backdrop-filter:blur(14px);
       transition:.3s ease;
     }
+    .language-switcher button:hover,.language-switcher button.active{background:var(--gold);color:var(--emerald-dark);}
 
-    .language-switcher button:hover{
+    footer{text-align:center;padding:50px 24px 100px;color:rgba(255,246,232,.45);border-top:1px solid var(--line);font-size:14px;}
 
-      background:#e7c9a4;
-
-      color:#021a12;
+    @media(max-width:1024px){
+      .hero-inner,.visit-card,.story-grid{grid-template-columns:1fr;}
+      .services-grid,.reviews-grid{grid-template-columns:1fr;}
+      .photo-grid{grid-template-columns:repeat(2,1fr);}
+      .trust-grid{grid-template-columns:repeat(2,1fr);}
+      h1{font-size:70px;}
+      .hero h2{font-size:34px;}
     }
 
-    /* =========================
-       FOOTER
-    ========================== */
-
-    footer{
-
-      text-align:center;
-
-      padding:50px 24px 100px;
-
-      color:rgba(255,246,232,.45);
-
-      border-top:1px solid var(--line);
-
-      font-size:14px;
+    @media(max-width:640px){
+      .nav-links{display:none;}
+      .photo-grid{grid-template-columns:1fr;}
+      .hero-gallery{grid-template-columns:1fr;}
+      .hero-photo.big{min-height:360px;}
+      h1{font-size:56px;}
+      .hero h2{font-size:28px;}
+      .section-head h2{font-size:38px;}
+      .visit-card h2{font-size:38px;}
+      .hero-actions{flex-direction:column;}
+      .btn{width:100%;}
+      .language-switcher{right:10px;bottom:72px;}
+      .language-switcher button{font-size:12px;padding:8px 12px;}
     }
-
   </style>
-
 </head>
 
 <body>
-
   <header class="topbar">
-
     <nav class="nav">
-
       <a href="#" class="brand">
-
         <div class="logo">M</div>
-
         <span>MIYA</span>
-
       </a>
 
       <div class="nav-links">
-
-        <a href="#services">療程方案</a>
-
-        <a href="#gallery">店內環境</a>
-
-        <a href="#reviews">顧客評價</a>
-
-        <a href="#visit">立即預約</a>
-
+        <a href="#story" data-i18n="navStory">品牌故事</a>
+        <a href="#services" data-i18n="navServices">療程方案</a>
+        <a href="#gallery" data-i18n="navGallery">店內環境</a>
+        <a href="#reviews" data-i18n="navReviews">顧客評價</a>
+        <a href="#visit" data-i18n="navVisit">立即預約</a>
       </div>
-
     </nav>
-
   </header>
 
   <section class="hero">
-
     <div class="hero-inner">
-
       <div>
+        <div class="eyebrow" data-i18n="heroEyebrow">Vietnamese Hair Spa · Kaohsiung</div>
+        <h1>MIYA</h1>
+        <h2 data-i18n="heroTitle">不是只是洗頭，<br>而是一場讓身心重新開機的療癒儀式。</h2>
+        <p class="lead" data-i18n="heroLead">Miya 越式洗髮館結合越式洗髮、頭皮舒壓、肩頸按摩、草本香氛與深層放鬆，讓你在高雄左營找到真正能放空的地方。</p>
 
-        <div class="eyebrow">
-          Vietnamese Hair Spa · Kaohsiung
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="tel:0900439213" data-i18n="btnCall">☎ 電話預約</a>
+          <a class="btn btn-line" href="https://line.me/R/ti/p/@lienlien1602" target="_blank" data-i18n="btnLine">LINE 預約</a>
+          <a class="btn btn-outline" href="https://maps.app.goo.gl/hSzXBpwmcEfWkdjK6" target="_blank" data-i18n="btnMap">Google Map</a>
         </div>
 
-        <h1>MIYA</h1>
-
-        <h2>
-          不是只是洗頭，<br>
-          而是一場讓身心重新開機的療癒儀式。
-        </h2>
-
-        <p class="lead">
-          Miya 越式洗髮館結合越式洗髮、頭皮舒壓、肩頸按摩、
-          草本香氛與深層放鬆，讓你在高雄左營找到真正能放空的地方。
-        </p>
-
+        <div class="trust-grid">
+          <div class="trust"><strong>5.0</strong><span data-i18n="trust1">Google 高分口碑</span></div>
+          <div class="trust"><strong>767+</strong><span data-i18n="trust2">真實評論</span></div>
+          <div class="trust"><strong>70 min</strong><span data-i18n="trust3">人氣療程</span></div>
+          <div class="trust"><strong>NT$990</strong><span data-i18n="trust4">高 CP 值方案</span></div>
+        </div>
       </div>
 
+      <div class="hero-gallery">
+        <div class="hero-photo big"><img src="assets/miya-3.png" alt="Miya 越式洗髮服務實景"></div>
+        <div class="hero-photo"><img src="assets/miya-2.png" alt="Miya 店內環境"></div>
+        <div class="hero-photo"><img src="assets/miya-7.png" alt="Miya 服務團隊"></div>
+      </div>
     </div>
-
   </section>
 
-  <!-- LANGUAGE SWITCHER -->
+  <section id="story">
+    <div class="container">
+      <div class="section-head">
+        <span class="mini" data-i18n="storyMini">Brand Story</span>
+        <h2 data-i18n="storyTitle">把越式洗髮，變成高雄城市裡的奢華放鬆入口</h2>
+        <p data-i18n="storyLead">Miya 不只是洗頭，而是從頭皮、肩頸、臉部到情緒都被溫柔照顧的一段時間。</p>
+      </div>
 
-  <div class="language-switcher">
+      <div class="story-grid">
+        <div class="story-card">
+          <h3 data-i18n="storyCard1Title">舒服到睡著</h3>
+          <p data-i18n="storyCard1Text">水聲、泡沫、輕音樂與指尖節奏慢慢讓身體安靜下來，許多客人會在療程中自然睡著。</p>
+        </div>
+        <div class="story-card">
+          <h3 data-i18n="storyCard2Title">不強迫推銷</h3>
+          <p data-i18n="storyCard2Text">我們希望客人真正休息，不被打擾。來 Miya，是為了把壓力放下，而不是增加壓力。</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <button onclick="setLanguage('zh')">
-      繁中
-    </button>
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="mini" data-i18n="servicesMini">Service Menu</span>
+        <h2 data-i18n="servicesTitle">三種方案，滿足不同放鬆需求</h2>
+        <p data-i18n="servicesLead">從快速清爽到深層療癒，讓客人能快速找到適合自己的體驗。</p>
+      </div>
 
-    <button onclick="setLanguage('en')">
-      EN
-    </button>
+      <div class="services-grid">
+        <article class="package">
+          <span class="tag" data-i18n="basicTag">快速清爽</span>
+          <h3 data-i18n="basicTitle">Basic</h3>
+          <div class="price" data-i18n="basicPrice">入門放鬆</div>
+          <ul>
+            <li data-i18n="basicLi1">頭皮清潔</li>
+            <li data-i18n="basicLi2">基礎洗髮</li>
+            <li data-i18n="basicLi3">簡易按摩</li>
+            <li data-i18n="basicLi4">吹乾整理</li>
+          </ul>
+          <a class="btn btn-outline" href="https://line.me/R/ti/p/@lienlien1602" target="_blank" data-i18n="btnAskLine">LINE 詢問</a>
+        </article>
 
-    <button onclick="setLanguage('ja')">
-      日本語
-    </button>
+        <article class="package featured">
+          <span class="tag" data-i18n="signatureTag">最多人選</span>
+          <h3 data-i18n="signatureTitle">Signature</h3>
+          <div class="price">NT$990</div>
+          <ul>
+            <li data-i18n="signatureLi1">70 分鐘完整療程</li>
+            <li data-i18n="signatureLi2">肩頸舒壓</li>
+            <li data-i18n="signatureLi3">頭皮按摩</li>
+            <li data-i18n="signatureLi4">臉部放鬆</li>
+          </ul>
+          <a class="btn btn-gold" href="tel:0900439213" data-i18n="btnReserveNow">立即預約</a>
+        </article>
 
-    <button onclick="setLanguage('ko')">
-      한국어
-    </button>
+        <article class="package">
+          <span class="tag" data-i18n="premiumTag">深層療癒</span>
+          <h3 data-i18n="premiumTitle">Premium</h3>
+          <div class="price" data-i18n="premiumPrice">105 分鐘</div>
+          <ul>
+            <li data-i18n="premiumLi1">加強肩頸放鬆</li>
+            <li data-i18n="premiumLi2">熱敷舒壓</li>
+            <li data-i18n="premiumLi3">深層頭皮按摩</li>
+            <li data-i18n="premiumLi4">適合重度疲勞族群</li>
+          </ul>
+          <a class="btn btn-outline" href="https://maps.app.goo.gl/hSzXBpwmcEfWkdjK6" target="_blank" data-i18n="btnViewLocation">查看位置</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <button onclick="setLanguage('vi')">
-      Tiếng Việt
-    </button>
+  <section id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <span class="mini" data-i18n="galleryMini">Real Environment</span>
+        <h2 data-i18n="galleryTitle">真實環境，比過度修圖更有信任感</h2>
+        <p data-i18n="galleryLead">乾淨、安靜、親切，是讓第一次來的客人放心預約的關鍵。</p>
+      </div>
 
+      <div class="photo-grid">
+        <div class="photo tall"><img src="assets/miya-1.png" alt="Miya service"></div>
+        <div class="photo wide"><img src="assets/miya-2.png" alt="Miya interior"></div>
+        <div class="photo"><img src="assets/miya-5.png" alt="Miya shampoo"></div>
+        <div class="photo"><img src="assets/miya-6.png" alt="Miya room"></div>
+        <div class="photo"><img src="assets/miya-7.png" alt="Miya team"></div>
+        <div class="photo wide"><img src="assets/miya-8.png" alt="Miya spa"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <span class="mini" data-i18n="reviewsMini">Google Reviews</span>
+        <h2 data-i18n="reviewsTitle">真實顧客最有說服力</h2>
+        <p data-i18n="reviewsLead">舒服、乾淨、按摩力道剛好、不推銷，是客人最常提到的感受。</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p data-i18n="review1">「舒服到睡著，按摩力道很剛好，洗完整個人都放鬆了。」</p>
+          <strong data-i18n="reviewAuthor">— Google 顧客評論</strong>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p data-i18n="review2">「第一次體驗越式洗髮，比想像中還舒服很多。」</p>
+          <strong data-i18n="reviewAuthor">— Google 顧客評論</strong>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p data-i18n="review3">「不推銷、環境乾淨，下次還會再回訪。」</p>
+          <strong data-i18n="reviewAuthor">— Google 顧客評論</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="mini" data-i18n="faqMini">FAQ</span>
+        <h2 data-i18n="faqTitle">常見問題</h2>
+        <p data-i18n="faqLead">第一次來之前，先了解最常見的疑問。</p>
+      </div>
+
+      <div class="faq-grid">
+        <details open>
+          <summary data-i18n="faqQ1">第一次來建議選哪一個方案？</summary>
+          <p data-i18n="faqA1">建議先選 Signature 70 分鐘方案，能完整體驗越式洗髮、頭皮按摩、肩頸舒壓與臉部放鬆。</p>
+        </details>
+        <details>
+          <summary data-i18n="faqQ2">按摩力道可以調整嗎？</summary>
+          <p data-i18n="faqA2">可以。服務前或過程中都可以告知想要輕柔、適中或加強力道。</p>
+        </details>
+        <details>
+          <summary data-i18n="faqQ3">男生也可以預約嗎？</summary>
+          <p data-i18n="faqA3">可以。許多男性客人也會選擇越式洗髮與肩頸放鬆，特別適合工作壓力大或肩頸緊繃的人。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="container">
+      <div class="visit-card">
+        <div>
+          <h2 data-i18n="visitTitle">現在就預約<br>一段真正放鬆的時間</h2>
+          <p data-i18n="visitLead">Miya 越式洗髮館位於高雄左營，等你把壓力放下。</p>
+
+          <div class="info-list">
+            <div><strong data-i18n="labelAddress">地址</strong> <span data-i18n="addressText">高雄市左營區華夏路557號</span></div>
+            <div><strong data-i18n="labelPhone">電話</strong> 0900-439-213</div>
+            <div><strong>LINE</strong> @lienlien1602</div>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="tel:0900439213" data-i18n="btnCall">☎ 電話預約</a>
+            <a class="btn btn-line" href="https://line.me/R/ti/p/@lienlien1602" target="_blank" data-i18n="btnLine">LINE 預約</a>
+          </div>
+        </div>
+
+        <a class="mapbox" href="https://maps.app.goo.gl/hSzXBpwmcEfWkdjK6" target="_blank" aria-label="Google Map"></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="language-switcher" aria-label="Language Switcher">
+    <button type="button" onclick="setLanguage('zh')" data-lang="zh">繁中</button>
+    <button type="button" onclick="setLanguage('en')" data-lang="en">EN</button>
+    <button type="button" onclick="setLanguage('ja')" data-lang="ja">日本語</button>
+    <button type="button" onclick="setLanguage('ko')" data-lang="ko">한국어</button>
+    <button type="button" onclick="setLanguage('vi')" data-lang="vi">Tiếng Việt</button>
   </div>
 
-  <footer>
-
-    © Miya 越式洗髮館
-
-  </footer>
+  <footer data-i18n="footerText">© Miya 越式洗髮館｜高雄左營越式洗髮・頭皮舒壓・肩頸放鬆</footer>
 
   <script>
-
     const translations = {
-
-      zh:{
-        heroTitle:"不是只是洗頭，<br>而是一場讓身心重新開機的療癒儀式。",
-        heroLead:"Miya 越式洗髮館結合越式洗髮、頭皮舒壓、肩頸按摩、草本香氛與深層放鬆，讓你在高雄左營找到真正能放空的地方。"
+      zh: {
+        metaTitle:"Miya 越式洗髮館｜高雄左營奢華越式洗髮・頭皮舒壓・肩頸放鬆",
+        navStory:"品牌故事", navServices:"療程方案", navGallery:"店內環境", navReviews:"顧客評價", navVisit:"立即預約",
+        heroEyebrow:"Vietnamese Hair Spa · Kaohsiung", heroTitle:"不是只是洗頭，<br>而是一場讓身心重新開機的療癒儀式。", heroLead:"Miya 越式洗髮館結合越式洗髮、頭皮舒壓、肩頸按摩、草本香氛與深層放鬆，讓你在高雄左營找到真正能放空的地方。",
+        btnCall:"☎ 電話預約", btnLine:"LINE 預約", btnMap:"Google Map", btnAskLine:"LINE 詢問", btnReserveNow:"立即預約", btnViewLocation:"查看位置",
+        trust1:"Google 高分口碑", trust2:"真實評論", trust3:"人氣療程", trust4:"高 CP 值方案",
+        storyMini:"Brand Story", storyTitle:"把越式洗髮，變成高雄城市裡的奢華放鬆入口", storyLead:"Miya 不只是洗頭，而是從頭皮、肩頸、臉部到情緒都被溫柔照顧的一段時間。", storyCard1Title:"舒服到睡著", storyCard1Text:"水聲、泡沫、輕音樂與指尖節奏慢慢讓身體安靜下來，許多客人會在療程中自然睡著。", storyCard2Title:"不強迫推銷", storyCard2Text:"我們希望客人真正休息，不被打擾。來 Miya，是為了把壓力放下，而不是增加壓力。",
+        servicesMini:"Service Menu", servicesTitle:"三種方案，滿足不同放鬆需求", servicesLead:"從快速清爽到深層療癒，讓客人能快速找到適合自己的體驗。",
+        basicTag:"快速清爽", basicTitle:"Basic", basicPrice:"入門放鬆", basicLi1:"頭皮清潔", basicLi2:"基礎洗髮", basicLi3:"簡易按摩", basicLi4:"吹乾整理",
+        signatureTag:"最多人選", signatureTitle:"Signature", signatureLi1:"70 分鐘完整療程", signatureLi2:"肩頸舒壓", signatureLi3:"頭皮按摩", signatureLi4:"臉部放鬆",
+        premiumTag:"深層療癒", premiumTitle:"Premium", premiumPrice:"105 分鐘", premiumLi1:"加強肩頸放鬆", premiumLi2:"熱敷舒壓", premiumLi3:"深層頭皮按摩", premiumLi4:"適合重度疲勞族群",
+        galleryMini:"Real Environment", galleryTitle:"真實環境，比過度修圖更有信任感", galleryLead:"乾淨、安靜、親切，是讓第一次來的客人放心預約的關鍵。",
+        reviewsMini:"Google Reviews", reviewsTitle:"真實顧客最有說服力", reviewsLead:"舒服、乾淨、按摩力道剛好、不推銷，是客人最常提到的感受。", review1:"「舒服到睡著，按摩力道很剛好，洗完整個人都放鬆了。」", review2:"「第一次體驗越式洗髮，比想像中還舒服很多。」", review3:"「不推銷、環境乾淨，下次還會再回訪。」", reviewAuthor:"— Google 顧客評論",
+        faqMini:"FAQ", faqTitle:"常見問題", faqLead:"第一次來之前，先了解最常見的疑問。", faqQ1:"第一次來建議選哪一個方案？", faqA1:"建議先選 Signature 70 分鐘方案，能完整體驗越式洗髮、頭皮按摩、肩頸舒壓與臉部放鬆。", faqQ2:"按摩力道可以調整嗎？", faqA2:"可以。服務前或過程中都可以告知想要輕柔、適中或加強力道。", faqQ3:"男生也可以預約嗎？", faqA3:"可以。許多男性客人也會選擇越式洗髮與肩頸放鬆，特別適合工作壓力大或肩頸緊繃的人。",
+        visitTitle:"現在就預約<br>一段真正放鬆的時間", visitLead:"Miya 越式洗髮館位於高雄左營，等你把壓力放下。", labelAddress:"地址", labelPhone:"電話", addressText:"高雄市左營區華夏路557號", footerText:"© Miya 越式洗髮館｜高雄左營越式洗髮・頭皮舒壓・肩頸放鬆"
       },
-
-      en:{
-        heroTitle:"Not just a hair wash,<br>but a healing ritual for your body and mind.",
-        heroLead:"Miya combines Vietnamese shampoo therapy, scalp relaxation, shoulder massage, herbal aroma and deep healing in Kaohsiung."
+      en: {
+        metaTitle:"Miya Vietnamese Hair Spa｜Luxury Hair Spa in Zuoying, Kaohsiung",
+        navStory:"Story", navServices:"Services", navGallery:"Gallery", navReviews:"Reviews", navVisit:"Book Now",
+        heroEyebrow:"Vietnamese Hair Spa · Kaohsiung", heroTitle:"Not just a hair wash,<br>but a healing ritual for body and mind.", heroLead:"Miya combines Vietnamese shampoo therapy, scalp relaxation, shoulder and neck massage, herbal aroma, and deep relaxation in Zuoying, Kaohsiung.",
+        btnCall:"☎ Call Now", btnLine:"Book on LINE", btnMap:"Google Map", btnAskLine:"Ask on LINE", btnReserveNow:"Book Now", btnViewLocation:"View Location",
+        trust1:"Google rating", trust2:"Real reviews", trust3:"Popular treatment", trust4:"Great value",
+        storyMini:"Brand Story", storyTitle:"Vietnamese hair spa reimagined as an affordable luxury escape in Kaohsiung", storyLead:"Miya is more than shampoo. It is a gentle experience that cares for your scalp, shoulders, face, and emotions.", storyCard1Title:"Relaxed enough to fall asleep", storyCard1Text:"Water sounds, soft foam, music, and rhythmic massage help your body slow down. Many guests naturally fall asleep during the treatment.", storyCard2Title:"No pressure selling", storyCard2Text:"We want guests to truly rest without interruption. Miya is a place to release stress, not to add more pressure.",
+        servicesMini:"Service Menu", servicesTitle:"Three experiences for different relaxation needs", servicesLead:"From a quick refresh to deeper healing, choose the experience that fits your day.",
+        basicTag:"Quick refresh", basicTitle:"Basic", basicPrice:"Starter relaxation", basicLi1:"Scalp cleansing", basicLi2:"Basic shampoo", basicLi3:"Light massage", basicLi4:"Blow dry and finish",
+        signatureTag:"Most popular", signatureTitle:"Signature", signatureLi1:"70-minute complete experience", signatureLi2:"Shoulder and neck relief", signatureLi3:"Scalp massage", signatureLi4:"Facial relaxation",
+        premiumTag:"Deep healing", premiumTitle:"Premium", premiumPrice:"105 minutes", premiumLi1:"Enhanced shoulder and neck massage", premiumLi2:"Warm compress relaxation", premiumLi3:"Deep scalp therapy", premiumLi4:"Ideal for heavy fatigue",
+        galleryMini:"Real Environment", galleryTitle:"A real space builds more trust than over-edited photos", galleryLead:"Clean, quiet, and welcoming—everything a first-time guest needs to feel safe booking.",
+        reviewsMini:"Google Reviews", reviewsTitle:"Real customers create real trust", reviewsLead:"Comfortable, clean, good massage pressure, and no hard selling are the feelings guests mention most.", review1:"“So comfortable I fell asleep. The massage pressure was just right, and I felt completely relaxed afterward.”", review2:"“My first Vietnamese hair spa experience was much more relaxing than I expected.”", review3:"“No hard selling, clean environment, and I will definitely come back.”", reviewAuthor:"— Google customer review",
+        faqMini:"FAQ", faqTitle:"Frequently Asked Questions", faqLead:"Know the most common questions before your first visit.", faqQ1:"Which treatment should I choose for my first visit?", faqA1:"We recommend the Signature 70-minute experience. It includes Vietnamese shampoo, scalp massage, shoulder and neck relief, and facial relaxation.", faqQ2:"Can I adjust the massage pressure?", faqA2:"Yes. Before or during the service, simply tell us whether you prefer gentle, medium, or stronger pressure.", faqQ3:"Can men book a treatment too?", faqA3:"Yes. Many male guests enjoy Vietnamese shampoo and shoulder-neck relaxation, especially after work or when feeling tension.",
+        visitTitle:"Book a truly relaxing<br>moment today", visitLead:"Miya is located in Zuoying, Kaohsiung, ready to help you leave your stress behind.", labelAddress:"Address", labelPhone:"Phone", addressText:"No. 557, Huaxia Rd., Zuoying Dist., Kaohsiung", footerText:"© Miya Vietnamese Hair Spa｜Zuoying, Kaohsiung"
       },
-
-      ja:{
-        heroTitle:"ただの洗髪ではなく、<br>心と身体を癒すリラクゼーション体験。",
-        heroLead:"Miyaはベトナム式シャンプー、頭皮ケア、肩首マッサージを融合した癒し空間です。"
+      ja: {
+        metaTitle:"Miya ベトナム式ヘアスパ｜高雄左営の癒しサロン",
+        navStory:"ストーリー", navServices:"メニュー", navGallery:"店内写真", navReviews:"口コミ", navVisit:"予約",
+        heroEyebrow:"Vietnamese Hair Spa · Kaohsiung", heroTitle:"ただの洗髪ではなく、<br>心と身体を整える癒しの儀式。", heroLead:"Miyaはベトナム式シャンプー、頭皮ケア、肩首マッサージ、ハーブの香り、深いリラクゼーションを高雄左営で提供します。",
+        btnCall:"☎ 電話予約", btnLine:"LINE予約", btnMap:"Google Map", btnAskLine:"LINEで相談", btnReserveNow:"今すぐ予約", btnViewLocation:"場所を見る",
+        trust1:"Google高評価", trust2:"リアルな口コミ", trust3:"人気コース", trust4:"高コスパ",
+        storyMini:"Brand Story", storyTitle:"ベトナム式洗髪を、高雄の上質な癒し体験へ", storyLead:"Miyaは単なるシャンプーではなく、頭皮・肩首・顔・気持ちまでやさしく整える時間です。", storyCard1Title:"眠ってしまうほど心地よい", storyCard1Text:"水音、泡、音楽、指先のリズムが身体をゆっくり静め、多くのお客様が自然に眠りに入ります。", storyCard2Title:"強引な販売なし", storyCard2Text:"お客様に本当に休んでいただくことを大切にしています。Miyaはストレスを増やす場所ではなく、手放す場所です。",
+        servicesMini:"Service Menu", servicesTitle:"目的に合わせた3つのリラクゼーションプラン", servicesLead:"短時間のリフレッシュから深い癒しまで、その日の状態に合わせて選べます。",
+        basicTag:"クイック", basicTitle:"Basic", basicPrice:"入門リラックス", basicLi1:"頭皮クレンジング", basicLi2:"基本シャンプー", basicLi3:"軽いマッサージ", basicLi4:"ブロー仕上げ",
+        signatureTag:"一番人気", signatureTitle:"Signature", signatureLi1:"70分のフル体験", signatureLi2:"肩首リリース", signatureLi3:"頭皮マッサージ", signatureLi4:"フェイスリラックス",
+        premiumTag:"深い癒し", premiumTitle:"Premium", premiumPrice:"105分", premiumLi1:"肩首マッサージ強化", premiumLi2:"温熱リラックス", premiumLi3:"深層頭皮ケア", premiumLi4:"強い疲れを感じる方に最適",
+        galleryMini:"Real Environment", galleryTitle:"過度な加工より、リアルな空間が信頼を生む", galleryLead:"清潔で静か、親しみやすい空間は、初めてのお客様にも安心感を与えます。",
+        reviewsMini:"Google Reviews", reviewsTitle:"本物のお客様の声が信頼をつくります", reviewsLead:"心地よさ、清潔感、ちょうど良い力加減、押し売りなしが多く語られています。", review1:"「気持ちよくて眠ってしまいました。力加減もちょうど良く、終わった後はとてもリラックスできました。」", review2:"「初めてのベトナム式ヘアスパでしたが、想像以上に心地よかったです。」", review3:"「押し売りがなく、店内も清潔。また来たいです。」", reviewAuthor:"— Google 口コミ",
+        faqMini:"FAQ", faqTitle:"よくある質問", faqLead:"初めてのご来店前に、よくある疑問をご確認ください。", faqQ1:"初めての場合、どのプランがおすすめですか？", faqA1:"Signature 70分コースがおすすめです。ベトナム式シャンプー、頭皮マッサージ、肩首ケア、フェイスリラックスを体験できます。", faqQ2:"マッサージの力加減は調整できますか？", faqA2:"はい。施術前または途中で、弱め・普通・強めなどお気軽にお伝えください。", faqQ3:"男性も予約できますか？", faqA3:"はい。仕事後の疲れや肩首のこりを感じる男性のお客様にもおすすめです。",
+        visitTitle:"本当の癒し時間を<br>今すぐ予約", visitLead:"Miyaは高雄左営にあります。日々の疲れをここで手放してください。", labelAddress:"住所", labelPhone:"電話", addressText:"高雄市左営区華夏路557号", footerText:"© Miya ベトナム式ヘアスパ｜高雄左営"
       },
-
-      ko:{
-        heroTitle:"단순한 샴푸가 아닌,<br>몸과 마음을 위한 힐링 의식.",
-        heroLead:"Miya는 베트남식 샴푸와 두피 케어를 제공합니다."
+      ko: {
+        metaTitle:"Miya 베트남식 헤어 스파｜가오슝 쭤잉 힐링 살롱",
+        navStory:"브랜드", navServices:"서비스", navGallery:"공간", navReviews:"리뷰", navVisit:"예약",
+        heroEyebrow:"Vietnamese Hair Spa · Kaohsiung", heroTitle:"단순한 샴푸가 아닌,<br>몸과 마음을 위한 힐링 의식.", heroLead:"Miya는 베트남식 샴푸, 두피 케어, 어깨와 목 마사지, 허브 향기와 깊은 휴식을 가오슝 쭤잉에서 제공합니다.",
+        btnCall:"☎ 전화 예약", btnLine:"LINE 예약", btnMap:"Google Map", btnAskLine:"LINE 문의", btnReserveNow:"지금 예약", btnViewLocation:"위치 보기",
+        trust1:"Google 높은 평점", trust2:"실제 리뷰", trust3:"인기 코스", trust4:"가성비 좋은 코스",
+        storyMini:"Brand Story", storyTitle:"베트남식 샴푸를 가오슝의 고급 힐링 경험으로", storyLead:"Miya는 단순한 샴푸가 아니라 두피, 어깨, 얼굴, 마음까지 부드럽게 돌보는 시간입니다.", storyCard1Title:"잠들 만큼 편안함", storyCard1Text:"물소리, 거품, 음악, 손끝의 리듬이 몸을 천천히 이완시켜 많은 고객이 자연스럽게 잠이 듭니다.", storyCard2Title:"강요 없는 편안함", storyCard2Text:"Miya는 진짜 휴식을 위한 공간입니다. 압박을 더하는 곳이 아니라 스트레스를 내려놓는 곳입니다.",
+        servicesMini:"Service Menu", servicesTitle:"휴식 니즈에 맞춘 세 가지 프로그램", servicesLead:"빠른 리프레시부터 깊은 힐링까지, 지금 필요한 경험을 선택하세요.",
+        basicTag:"빠른 리프레시", basicTitle:"Basic", basicPrice:"입문 휴식", basicLi1:"두피 클렌징", basicLi2:"기본 샴푸", basicLi3:"간단 마사지", basicLi4:"드라이 마무리",
+        signatureTag:"가장 인기", signatureTitle:"Signature", signatureLi1:"70분 완성 코스", signatureLi2:"어깨와 목 이완", signatureLi3:"두피 마사지", signatureLi4:"얼굴 릴랙스",
+        premiumTag:"딥 힐링", premiumTitle:"Premium", premiumPrice:"105분", premiumLi1:"어깨와 목 집중 케어", premiumLi2:"온열 릴랙스", premiumLi3:"깊은 두피 테라피", premiumLi4:"심한 피로에 추천",
+        galleryMini:"Real Environment", galleryTitle:"과한 보정보다 실제 공간이 더 큰 신뢰를 만듭니다", galleryLead:"깨끗하고 조용하며 친절한 분위기는 처음 방문하는 고객도 안심하게 합니다.",
+        reviewsMini:"Google Reviews", reviewsTitle:"실제 고객 리뷰가 가장 큰 신뢰입니다", reviewsLead:"편안함, 청결함, 적절한 마사지 압력, 강요 없는 서비스가 자주 언급됩니다.", review1:"“너무 편해서 잠들었습니다. 마사지 압력도 딱 좋았고 끝난 뒤 완전히 이완되었습니다.”", review2:"“처음 경험한 베트남식 헤어 스파였는데 기대보다 훨씬 편안했습니다.”", review3:"“강요가 없고 공간도 깨끗해서 다시 방문하고 싶습니다.”", reviewAuthor:"— Google 고객 리뷰",
+        faqMini:"FAQ", faqTitle:"자주 묻는 질문", faqLead:"첫 방문 전에 자주 묻는 질문을 확인하세요.", faqQ1:"처음 방문하면 어떤 코스를 선택하면 좋나요?", faqA1:"Signature 70분 코스를 추천합니다. 베트남식 샴푸, 두피 마사지, 어깨와 목 이완, 얼굴 릴랙스를 모두 경험할 수 있습니다.", faqQ2:"마사지 압력은 조절할 수 있나요?", faqA2:"네. 서비스 전이나 진행 중에 약하게, 보통, 강하게 등 원하는 압력을 말씀해 주세요.", faqQ3:"남성도 예약할 수 있나요?", faqA3:"네. 업무 후 피로하거나 어깨와 목이 뻐근한 남성 고객에게도 추천합니다.",
+        visitTitle:"진정한 휴식 시간을<br>지금 예약하세요", visitLead:"Miya는 가오슝 쭤잉에 있습니다. 이곳에서 하루의 스트레스를 내려놓으세요.", labelAddress:"주소", labelPhone:"전화", addressText:"가오슝시 쭤잉구 화샤로 557호", footerText:"© Miya 베트남식 헤어 스파｜가오슝 쭤잉"
       },
-
-      vi:{
-        heroTitle:"Không chỉ là gội đầu,<br>mà là một hành trình chữa lành.",
-        heroLead:"Miya kết hợp gội đầu Việt Nam và massage thư giãn."
+      vi: {
+        metaTitle:"Miya Gội Đầu Dưỡng Sinh Việt Nam｜Zuoying Kaohsiung",
+        navStory:"Câu chuyện", navServices:"Dịch vụ", navGallery:"Hình ảnh", navReviews:"Đánh giá", navVisit:"Đặt lịch",
+        heroEyebrow:"Vietnamese Hair Spa · Kaohsiung", heroTitle:"Không chỉ là gội đầu,<br>mà là một nghi thức chữa lành cho cơ thể và tâm hồn.", heroLead:"Miya kết hợp gội đầu Việt Nam, thư giãn da đầu, massage vai cổ, hương thảo mộc và liệu trình thư giãn sâu tại Zuoying, Kaohsiung.",
+        btnCall:"☎ Gọi đặt lịch", btnLine:"Đặt qua LINE", btnMap:"Google Map", btnAskLine:"Hỏi qua LINE", btnReserveNow:"Đặt lịch ngay", btnViewLocation:"Xem vị trí",
+        trust1:"Đánh giá Google cao", trust2:"Đánh giá thật", trust3:"Liệu trình phổ biến", trust4:"Giá trị cao",
+        storyMini:"Brand Story", storyTitle:"Biến gội đầu Việt Nam thành trải nghiệm thư giãn cao cấp tại Kaohsiung", storyLead:"Miya không chỉ là gội đầu, mà là khoảng thời gian chăm sóc nhẹ nhàng cho da đầu, vai cổ, khuôn mặt và cảm xúc.", storyCard1Title:"Thoải mái đến mức ngủ quên", storyCard1Text:"Tiếng nước, bọt mịn, âm nhạc nhẹ và nhịp tay massage giúp cơ thể chậm lại. Nhiều khách tự nhiên ngủ trong lúc trị liệu.", storyCard2Title:"Không ép bán hàng", storyCard2Text:"Chúng tôi muốn khách thật sự nghỉ ngơi. Miya là nơi để thả lỏng áp lực, không phải để tạo thêm áp lực.",
+        servicesMini:"Service Menu", servicesTitle:"Ba liệu trình cho từng nhu cầu thư giãn", servicesLead:"Từ làm mới nhanh đến chăm sóc sâu, hãy chọn trải nghiệm phù hợp với bạn.",
+        basicTag:"Làm mới nhanh", basicTitle:"Basic", basicPrice:"Thư giãn cơ bản", basicLi1:"Làm sạch da đầu", basicLi2:"Gội đầu cơ bản", basicLi3:"Massage nhẹ", basicLi4:"Sấy và hoàn thiện",
+        signatureTag:"Phổ biến nhất", signatureTitle:"Signature", signatureLi1:"Liệu trình trọn vẹn 70 phút", signatureLi2:"Thư giãn vai cổ", signatureLi3:"Massage da đầu", signatureLi4:"Thư giãn khuôn mặt",
+        premiumTag:"Chăm sóc sâu", premiumTitle:"Premium", premiumPrice:"105 phút", premiumLi1:"Tăng cường massage vai cổ", premiumLi2:"Thư giãn bằng nhiệt", premiumLi3:"Chăm sóc da đầu sâu", premiumLi4:"Phù hợp với người rất mệt mỏi",
+        galleryMini:"Real Environment", galleryTitle:"Không gian thật tạo niềm tin hơn ảnh chỉnh sửa quá mức", galleryLead:"Sạch sẽ, yên tĩnh và thân thiện là điều giúp khách lần đầu yên tâm đặt lịch.",
+        reviewsMini:"Google Reviews", reviewsTitle:"Khách hàng thật tạo nên niềm tin thật", reviewsLead:"Thoải mái, sạch sẽ, lực massage vừa phải và không ép bán hàng là những cảm nhận được nhắc đến nhiều nhất.", review1:"“Thoải mái đến mức tôi ngủ quên. Lực massage rất vừa phải, sau khi xong thấy cả người thư giãn.”", review2:"“Lần đầu trải nghiệm gội đầu Việt Nam, thoải mái hơn tôi tưởng rất nhiều.”", review3:"“Không ép bán hàng, không gian sạch sẽ, lần sau tôi sẽ quay lại.”", reviewAuthor:"— Đánh giá khách hàng Google",
+        faqMini:"FAQ", faqTitle:"Câu hỏi thường gặp", faqLead:"Tìm hiểu các câu hỏi phổ biến trước lần đầu ghé Miya.", faqQ1:"Lần đầu nên chọn liệu trình nào?", faqA1:"Nên chọn Signature 70 phút. Liệu trình bao gồm gội đầu Việt Nam, massage da đầu, thư giãn vai cổ và khuôn mặt.", faqQ2:"Có thể điều chỉnh lực massage không?", faqA2:"Có. Trước hoặc trong lúc phục vụ, bạn có thể nói muốn nhẹ, vừa hoặc mạnh hơn.", faqQ3:"Nam giới có thể đặt lịch không?", faqA3:"Có. Nhiều khách nam cũng chọn gội đầu Việt Nam và thư giãn vai cổ, đặc biệt sau giờ làm việc.",
+        visitTitle:"Đặt lịch cho<br>khoảnh khắc thư giãn thật sự", visitLead:"Miya nằm tại Zuoying, Kaohsiung, nơi bạn có thể thả lỏng áp lực hằng ngày.", labelAddress:"Địa chỉ", labelPhone:"Điện thoại", addressText:"Số 557, đường Huaxia, quận Zuoying, Kaohsiung", footerText:"© Miya Gội Đầu Dưỡng Sinh Việt Nam｜Zuoying Kaohsiung"
       }
     };
 
     function setLanguage(lang){
+      const t = translations[lang] || translations.zh;
+      document.documentElement.lang = lang === "zh" ? "zh-Hant" : lang;
+      document.title = t.metaTitle;
 
-      const t = translations[lang];
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if(t[key]) el.innerHTML = t[key];
+      });
 
-      document.querySelector(".hero h2").innerHTML =
-      t.heroTitle;
+      document.querySelectorAll(".language-switcher button").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === lang);
+      });
 
-      document.querySelector(".lead").innerHTML =
-      t.heroLead;
-
-      localStorage.setItem(
-      "miya-language",
-      lang);
+      localStorage.setItem("miya-language", lang);
     }
 
-    document.addEventListener(
-    "DOMContentLoaded",
-    ()=>{
-
-      const savedLang =
-      localStorage.getItem("miya-language")
-      || "zh";
-
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = localStorage.getItem("miya-language") || "zh";
       setLanguage(savedLang);
     });
-
   </script>
-
 </body>
-
 </html>
